@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" fill="none">
+  <rect width="240" height="240" fill="none"/>
+  <g stroke="#A67C2D" stroke-width="1.2" opacity="0.88">
+    <path d="M120 18L222 120L120 222L18 120L120 18Z"/>
+    <path d="M120 44L196 120L120 196L44 120L120 44Z"/>
+    <path d="M120 18V222M18 120H222"/>
+    <path d="M44 44L196 196M196 44L44 196"/>
+    <path d="M120 70L170 120L120 170L70 120L120 70Z"/>
+    <circle cx="120" cy="120" r="17"/>
+  </g>
+  <g stroke="#123C2F" stroke-width="0.8" opacity="0.45">
+    <path d="M0 0L240 240M240 0L0 240"/>
+    <path d="M60 0V240M180 0V240M0 60H240M0 180H240"/>
+  </g>
+</svg>
