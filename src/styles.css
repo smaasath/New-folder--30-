@@ -207,6 +207,28 @@ body::after {
     border-top: 1px solid;
   }
 
+  .couple-lockup {
+    display: grid;
+    justify-items: center;
+    gap: 0.35rem;
+    line-height: 1.05;
+    letter-spacing: 0.18em;
+    text-wrap: balance;
+  }
+
+  .couple-lockup span:not(.couple-lockup-mark) {
+    white-space: nowrap;
+  }
+
+  .couple-lockup-mark {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.86em;
+    font-style: italic;
+    line-height: 0.9;
+    letter-spacing: 0;
+    color: #a67c2d;
+  }
+
   .opening-card {
     width: min(100%, 46rem);
     padding: clamp(1.5rem, 4vw, 3rem);
@@ -332,6 +354,11 @@ body::after {
 
   .countdown-card strong {
     font-size: 2.35rem;
+  }
+
+  .couple-lockup {
+    font-size: clamp(1.65rem, 8vw, 2.15rem);
+    letter-spacing: 0.12em;
   }
 }
 

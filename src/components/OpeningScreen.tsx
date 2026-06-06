@@ -112,7 +112,7 @@ export function OpeningScreen({ onEnter }: OpeningScreenProps) {
           <span className="h-px w-16 bg-gradient-to-l from-transparent to-gold sm:w-20" />
         </motion.div>
         <motion.h1
-          className="font-display text-2xl font-semibold tracking-[0.14em] text-emerald sm:text-5xl sm:tracking-[0.28em]"
+          className="couple-lockup font-display text-2xl font-semibold text-emerald sm:text-5xl"
           variants={{
             hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
             visible: {
@@ -123,17 +123,12 @@ export function OpeningScreen({ onEnter }: OpeningScreenProps) {
             },
           }}
         >
-          {invitationData.coupleShort}
+          <span>{invitationData.coupleShort.groom}</span>
+          <span className="couple-lockup-mark" aria-hidden="true">
+            &
+          </span>
+          <span>{invitationData.coupleShort.bride}</span>
         </motion.h1>
-        <motion.p
-          className="mt-4 font-serif text-4xl italic text-deep-gold sm:text-5xl"
-          variants={{
-            hidden: { opacity: 0, scale: 0.85 },
-            visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-          }}
-        >
-          &
-        </motion.p>
         <motion.button
           type="button"
           onClick={onEnter}
