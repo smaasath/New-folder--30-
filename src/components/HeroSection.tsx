@@ -61,11 +61,6 @@ export function HeroSection() {
             variants={nameVariants}
             transition={{ duration: 0.9 }}
           >
-            <Portrait
-              src={invitationData.groom.photo}
-              alt={invitationData.groom.photoAlt}
-              align="left"
-            />
             <span className="panel-kicker">Groom</span>
             <h2>{invitationData.groom.name}</h2>
             <p>{invitationData.groom.parentLine}</p>
@@ -81,11 +76,6 @@ export function HeroSection() {
             variants={nameVariants}
             transition={{ duration: 0.9 }}
           >
-            <Portrait
-              src={invitationData.bride.photo}
-              alt={invitationData.bride.photoAlt}
-              align="right"
-            />
             <span className="panel-kicker">Bride</span>
             <h2>{invitationData.bride.name}</h2>
             <p>{invitationData.bride.parentLine}</p>

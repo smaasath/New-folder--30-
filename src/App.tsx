@@ -82,7 +82,6 @@ export default function App() {
             <QuranSection />
             <DateSection />
             <VenueSection />
-            <QRCodeSection />
             <FamiliesSection />
             <DuaSection />
             <RSVPSection />
