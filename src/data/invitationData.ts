@@ -1,5 +1,5 @@
 export const invitationData = {
-  coupleShort: "A. ASHRIF · N. HINA",
+  coupleShort: "A. ASHRIF ·      N. HINA",
   coupleFooter: "Ashrif & Hina",
   bismillahArabic: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
   bismillahEnglish:
