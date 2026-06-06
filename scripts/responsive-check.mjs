@@ -181,7 +181,8 @@ async function runViewport(viewport) {
       scrollWidth: document.documentElement.scrollWidth,
       bodyOverflow: getComputedStyle(document.body).overflow,
       hasMain: Boolean(document.querySelector('main')),
-      portraitCount: document.querySelectorAll('.portrait-frame img').length,
+      portraitCount: document.querySelectorAll('.portrait-frame img, img[src*="placeholder"]').length,
+      floralCount: document.querySelectorAll('img[src*="jasmine-spray"], img[src*="floral-corner"]').length,
       hasMusicToggle: Boolean(document.querySelector('button[aria-label*="background music"]'))
     }))()`,
   );
@@ -194,8 +195,12 @@ async function runViewport(viewport) {
     throw new Error(`${viewport.name}: invitation has horizontal overflow.`);
   }
 
-  if (invitation.portraitCount < 2) {
-    throw new Error(`${viewport.name}: couple portrait placeholders are missing.`);
+  if (invitation.portraitCount !== 0) {
+    throw new Error(`${viewport.name}: couple portrait placeholders should not render.`);
+  }
+
+  if (invitation.floralCount < 2) {
+    throw new Error(`${viewport.name}: floral ornaments are missing after opening.`);
   }
 
   if (invitation.hasMusicToggle === false) {
@@ -221,6 +226,7 @@ try {
       invitationScrollWidth: result.invitation.scrollWidth,
       width: result.invitation.width,
       portraits: result.invitation.portraitCount,
+      florals: result.invitation.floralCount,
     })),
   );
 } finally {

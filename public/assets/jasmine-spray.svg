@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" fill="none">
+  <title>Jasmine floral spray ornament</title>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M222 492C194 404 198 317 246 224C275 167 306 117 342 42" stroke="#A67C2D" stroke-width="5"/>
+    <path d="M231 364C188 337 149 306 115 269" stroke="#A67C2D" stroke-width="4"/>
+    <path d="M244 276C209 252 178 221 154 184" stroke="#A67C2D" stroke-width="4"/>
+    <path d="M272 192C242 165 219 135 203 101" stroke="#A67C2D" stroke-width="4"/>
+    <path d="M247 311C290 290 328 263 361 230" stroke="#A67C2D" stroke-width="4"/>
+    <path d="M285 214C325 200 360 180 391 153" stroke="#A67C2D" stroke-width="4"/>
+    <path d="M130 280C161 276 190 288 212 314C181 322 151 310 130 280Z" fill="#123C2F" fill-opacity=".78"/>
+    <path d="M151 184C185 185 213 201 233 231C199 236 171 220 151 184Z" fill="#123C2F" fill-opacity=".72"/>
+    <path d="M199 99C230 109 253 131 267 164C234 160 211 138 199 99Z" fill="#123C2F" fill-opacity=".7"/>
+    <path d="M292 302C312 273 340 254 375 247C361 281 333 299 292 302Z" fill="#123C2F" fill-opacity=".72"/>
+    <path d="M326 207C348 180 377 165 411 162C394 193 365 209 326 207Z" fill="#123C2F" fill-opacity=".68"/>
+  </g>
+  <g>
+    <g transform="translate(72 245)">
+      <path d="M42 28C42 50 26 64 9 58C-8 52-2 31 20 28C-2 25-8 4 9-2C26-8 42 6 42 28Z" fill="#FFF8EA" stroke="#C9A24D" stroke-width="4"/>
+      <path d="M42 28C59 13 80 18 84 36C88 54 66 60 42 28Z" fill="#F8EED8" stroke="#C9A24D" stroke-width="4"/>
+      <circle cx="42" cy="28" r="7" fill="#C9A24D"/>
+    </g>
+    <g transform="translate(116 160) rotate(-18)">
+      <path d="M38 25C38 45 23 58 8 53C-8 48-2 28 18 25C-2 22-8 3 8-2C23-7 38 5 38 25Z" fill="#FFF8EA" stroke="#C9A24D" stroke-width="4"/>
+      <path d="M38 25C53 11 72 16 76 32C80 49 60 55 38 25Z" fill="#F8EED8" stroke="#C9A24D" stroke-width="4"/>
+      <circle cx="38" cy="25" r="6" fill="#C9A24D"/>
+    </g>
+    <g transform="translate(168 72) rotate(-26)">
+      <path d="M34 23C34 41 21 52 7 48C-7 43-2 26 16 23C-2 20-7 3 7-2C21-6 34 5 34 23Z" fill="#FFF8EA" stroke="#C9A24D" stroke-width="3.5"/>
+      <path d="M34 23C48 11 65 15 68 30C72 44 54 49 34 23Z" fill="#F8EED8" stroke="#C9A24D" stroke-width="3.5"/>
+      <circle cx="34" cy="23" r="5.5" fill="#C9A24D"/>
+    </g>
+    <g transform="translate(326 118) rotate(38)">
+      <path d="M36 24C36 43 22 55 8 50C-7 46-2 27 17 24C-2 21-7 3 8-2C22-7 36 5 36 24Z" fill="#FFF8EA" stroke="#C9A24D" stroke-width="3.5"/>
+      <path d="M36 24C51 11 69 15 73 31C76 47 58 52 36 24Z" fill="#F8EED8" stroke="#C9A24D" stroke-width="3.5"/>
+      <circle cx="36" cy="24" r="5.5" fill="#C9A24D"/>
+    </g>
+    <g transform="translate(292 224) rotate(24)">
+      <path d="M42 28C42 50 26 64 9 58C-8 52-2 31 20 28C-2 25-8 4 9-2C26-8 42 6 42 28Z" fill="#FFF8EA" stroke="#C9A24D" stroke-width="4"/>
+      <path d="M42 28C59 13 80 18 84 36C88 54 66 60 42 28Z" fill="#F8EED8" stroke="#C9A24D" stroke-width="4"/>
+      <circle cx="42" cy="28" r="7" fill="#C9A24D"/>
+    </g>
+  </g>
+</svg>

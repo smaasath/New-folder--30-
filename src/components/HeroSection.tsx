@@ -8,22 +8,42 @@ const nameVariants = {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden px-5 py-20 sm:py-28">
+    <section className="invitation-hero relative min-h-screen overflow-hidden px-5 py-20 sm:py-28">
       <div className="absolute inset-0 bg-[url('/assets/pattern.svg')] bg-[length:360px] opacity-[0.055]" aria-hidden="true" />
-      <img
-        src="/assets/floral-left.svg"
+      <motion.img
+        src="/assets/jasmine-spray.svg"
         alt=""
-        className="pointer-events-none absolute left-0 top-16 w-36 opacity-60 sm:w-56 lg:w-72"
-        loading="lazy"
+        className="hero-flower hero-flower-left"
+        decoding="async"
+        initial={{ opacity: 0, x: -50, y: -20, rotate: -18, scale: 0.92 }}
+        animate={{ opacity: 0.5, x: 0, y: [0, -14, 0], rotate: [-10, -6, -10], scale: 1 }}
+        transition={{
+          opacity: { duration: 1.1, delay: 0.2 },
+          x: { duration: 1.15, delay: 0.2, ease: [0.22, 1, 0.36, 1] },
+          scale: { duration: 1.15, delay: 0.2, ease: [0.22, 1, 0.36, 1] },
+          y: { duration: 9, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 10, repeat: Infinity, ease: "easeInOut" },
+        }}
+        aria-hidden="true"
       />
-      <img
-        src="/assets/floral-right.svg"
+      <motion.img
+        src="/assets/floral-corner.svg"
         alt=""
-        className="pointer-events-none absolute bottom-10 right-0 w-36 opacity-60 sm:w-56 lg:w-72"
-        loading="lazy"
+        className="hero-flower hero-flower-right"
+        decoding="async"
+        initial={{ opacity: 0, x: 50, y: 30, rotate: 16, scale: 0.92 }}
+        animate={{ opacity: 0.46, x: 0, y: [0, 16, 0], rotate: [9, 5, 9], scale: 1 }}
+        transition={{
+          opacity: { duration: 1.1, delay: 0.34 },
+          x: { duration: 1.15, delay: 0.34, ease: [0.22, 1, 0.36, 1] },
+          scale: { duration: 1.15, delay: 0.34, ease: [0.22, 1, 0.36, 1] },
+          y: { duration: 10, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 12, repeat: Infinity, ease: "easeInOut" },
+        }}
+        aria-hidden="true"
       />
       <motion.div
-        className="relative mx-auto flex max-w-5xl flex-col items-center text-center"
+        className="hero-invitation-frame relative mx-auto flex max-w-5xl flex-col items-center text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
@@ -60,6 +80,7 @@ export function HeroSection() {
             className="person-panel"
             variants={nameVariants}
             transition={{ duration: 0.9 }}
+            whileHover={{ y: -5 }}
           >
             <span className="panel-kicker">Groom</span>
             <h2>{invitationData.groom.name}</h2>
@@ -75,6 +96,7 @@ export function HeroSection() {
             className="person-panel"
             variants={nameVariants}
             transition={{ duration: 0.9 }}
+            whileHover={{ y: -5 }}
           >
             <span className="panel-kicker">Bride</span>
             <h2>{invitationData.bride.name}</h2>
@@ -106,32 +128,5 @@ export function HeroSection() {
         </motion.p>
       </motion.div>
     </section>
-  );
-}
-
-function Portrait({
-  src,
-  alt,
-  align,
-}: {
-  src: string;
-  alt: string;
-  align: "left" | "right";
-}) {
-  return (
-    <motion.div
-      className="portrait-frame"
-      initial={{ opacity: 0, scale: 0.92, y: 16 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.45 }}
-      transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <img
-        src={src}
-        alt={alt}
-        className={`h-full w-full object-cover ${align === "right" ? "object-[58%_50%]" : "object-[42%_50%]"}`}
-        loading="lazy"
-      />
-    </motion.div>
   );
 }

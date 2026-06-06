@@ -33,7 +33,7 @@ export function VenueSection() {
           <div className="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-emerald text-gold shadow-[0_0_0_14px_rgba(201,162,77,0.16)]">
             <MapPin size={30} fill="currentColor" aria-hidden="true" />
           </div>
-          <div className="absolute bottom-5 left-5 right-5 rounded-md border border-gold/30 bg-ivory/90 p-4 text-left shadow-glow backdrop-blur">
+          <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-gold/30 bg-ivory/90 p-4 text-left shadow-glow backdrop-blur">
             <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-deep-gold">
               Lee Meridien Banquet Hall
             </p>

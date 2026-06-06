@@ -27,8 +27,52 @@ export function OpeningScreen({ onEnter }: OpeningScreenProps) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.4, delay: 0.2 }}
       />
+      <motion.img
+        src="/assets/jasmine-spray.svg"
+        alt=""
+        className="opening-flower opening-flower-left"
+        decoding="async"
+        initial={{ opacity: 0, x: -36, y: -20, rotate: -16, scale: 0.94 }}
+        animate={{
+          opacity: 0.42,
+          x: 0,
+          y: [0, -12, 0],
+          rotate: [-10, -5, -10],
+          scale: 1,
+        }}
+        transition={{
+          opacity: { duration: 1.3, delay: 0.3 },
+          x: { duration: 1.2, delay: 0.3 },
+          scale: { duration: 1.2, delay: 0.3 },
+          y: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 10, repeat: Infinity, ease: "easeInOut" },
+        }}
+        aria-hidden="true"
+      />
+      <motion.img
+        src="/assets/floral-corner.svg"
+        alt=""
+        className="opening-flower opening-flower-right"
+        decoding="async"
+        initial={{ opacity: 0, x: 36, y: 20, rotate: 14, scale: 0.94 }}
+        animate={{
+          opacity: 0.38,
+          x: 0,
+          y: [0, 14, 0],
+          rotate: [9, 4, 9],
+          scale: 1,
+        }}
+        transition={{
+          opacity: { duration: 1.3, delay: 0.45 },
+          x: { duration: 1.2, delay: 0.45 },
+          scale: { duration: 1.2, delay: 0.45 },
+          y: { duration: 9, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 11, repeat: Infinity, ease: "easeInOut" },
+        }}
+        aria-hidden="true"
+      />
       <motion.div
-        className="relative max-w-3xl"
+        className="opening-card relative max-w-3xl"
         initial="hidden"
         animate="visible"
         variants={{

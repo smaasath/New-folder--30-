@@ -55,6 +55,7 @@ export function DateSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
+                whileHover={{ y: -4, scale: 1.02 }}
               >
                 <strong>{String(value).padStart(2, "0")}</strong>
                 <span>{label}</span>

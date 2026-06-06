@@ -8,14 +8,10 @@ export const invitationData = {
   groom: {
     name: "A. Ashrif Ihsan",
     parentLine: "Son of Mr. MH. Anver & Mrs. MC. Raizana Begem",
-    photo: "/assets/groom-placeholder.svg",
-    photoAlt: "Portrait placeholder for A. Ashrif Ihsan",
   },
   bride: {
     name: "N. Fathima Hina",
     parentLine: "Daughter of Mr. AR. Nawas & Mrs. MAA. Ummul Hakkeema",
-    photo: "/assets/bride-placeholder.svg",
-    photoAlt: "Portrait placeholder for N. Fathima Hina",
   },
   familyRequest:
     "Together with their families, they humbly request the honour of your blessed presence",

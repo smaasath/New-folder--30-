@@ -44,16 +44,14 @@ Place the final printed-invitation QR image at:
 public/assets/qr-code.png
 ```
 
-Replace the individual couple photo placeholders at:
+The invitation is designed without couple photo placeholders. Its botanical ornaments are lightweight editable SVG assets:
 
 ```text
-public/assets/groom-placeholder.svg
-public/assets/bride-placeholder.svg
+public/assets/jasmine-spray.svg
+public/assets/floral-corner.svg
 ```
 
-For real photos, you can either overwrite those files with optimized JPG/WebP images and update the extensions in `src/data/invitationData.ts`, or add new files such as `groom-photo.webp` and `bride-photo.webp` and point the `photo` fields to them.
-
-The included `pattern.svg`, `floral-left.svg`, and `floral-right.svg` are custom local SVG assets. If you replace them with external open-source artwork, keep the files in `public/assets/` and add attribution comments near the usage or in this README.
+The included floral and pattern SVGs are custom local vector assets. If you replace them with external open-source artwork, keep the files in `public/assets/` and add attribution comments near the usage or in this README.
 
 ## Editing Invitation Text
 

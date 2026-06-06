@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { OpeningScreen } from "./components/OpeningScreen";
 import { HeroSection } from "./components/HeroSection";
@@ -17,7 +17,7 @@ export default function App() {
   const [hasEntered, setHasEntered] = useState(false);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.body.style.overflow = hasEntered ? "" : "hidden";
 
     return () => {

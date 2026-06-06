@@ -45,9 +45,10 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 14% 10%, rgba(201, 162, 77, 0.18), transparent 26rem),
-    radial-gradient(circle at 82% 18%, rgba(18, 60, 47, 0.1), transparent 22rem),
-    linear-gradient(180deg, #fff8ea 0%, #f8eed8 48%, #fff8ea 100%);
+    radial-gradient(circle at 12% 8%, rgba(201, 162, 77, 0.18), transparent 25rem),
+    radial-gradient(circle at 88% 18%, rgba(18, 60, 47, 0.12), transparent 22rem),
+    radial-gradient(circle at 50% 54%, rgba(232, 191, 178, 0.18), transparent 28rem),
+    linear-gradient(180deg, #fff8ea 0%, #f8eed8 44%, #fffaf0 100%);
 }
 
 body::after {
@@ -64,13 +65,31 @@ body::after {
 @layer components {
   .section-label {
     @apply mb-8 text-center font-display text-xs font-bold uppercase tracking-[0.32em] text-deep-gold;
+    text-shadow: 0 10px 24px rgba(166, 124, 45, 0.16);
   }
 
   .lux-card {
-    @apply rounded-md border border-gold/45 bg-ivory/80 p-7 shadow-gold backdrop-blur-sm sm:p-10;
+    @apply relative overflow-hidden rounded-lg border border-gold/45 bg-ivory/85 p-7 shadow-gold backdrop-blur-sm sm:p-10;
     background-image:
       linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(248, 238, 216, 0.24)),
       radial-gradient(circle at top, rgba(201, 162, 77, 0.1), transparent 38%);
+  }
+
+  .lux-card::before {
+    content: "";
+    position: absolute;
+    right: -74px;
+    top: -78px;
+    width: 190px;
+    height: 190px;
+    pointer-events: none;
+    background: url("/assets/floral-corner.svg") center / contain no-repeat;
+    opacity: 0.115;
+    transform: rotate(14deg);
+  }
+
+  .lux-card > * {
+    position: relative;
   }
 
   .panel-kicker {
@@ -78,14 +97,23 @@ body::after {
   }
 
   .person-panel {
-    @apply relative overflow-hidden rounded-md border border-gold/45 bg-ivory/80 px-5 py-8 shadow-gold backdrop-blur-sm transition duration-500 sm:px-8 sm:py-10;
+    @apply relative overflow-hidden rounded-lg border border-gold/45 bg-ivory/85 px-5 py-10 shadow-gold backdrop-blur-sm transition duration-500 sm:px-8 sm:py-12;
     background-image:
+      url("/assets/jasmine-spray.svg"),
       linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(248, 238, 216, 0.18)),
       radial-gradient(circle at 50% 0%, rgba(201, 162, 77, 0.2), transparent 42%);
+    background-position:
+      right -54px top -54px,
+      center,
+      center;
+    background-repeat: no-repeat;
+    background-size:
+      150px auto,
+      auto,
+      auto;
   }
 
   .person-panel:hover {
-    transform: translateY(-4px);
     box-shadow: 0 0 0 1px rgba(201, 162, 77, 0.36), 0 34px 90px rgba(80, 55, 20, 0.18);
   }
 
@@ -114,30 +142,11 @@ body::after {
   }
 
   .person-panel h2 {
-    @apply mt-5 font-serif text-4xl font-semibold leading-tight text-emerald sm:text-5xl;
+    @apply mt-6 font-serif text-4xl font-semibold leading-tight text-emerald sm:text-5xl;
   }
 
   .person-panel p {
     @apply mx-auto mt-4 max-w-sm font-body text-sm leading-7 text-ink-brown/75 sm:text-base;
-  }
-
-  .portrait-frame {
-    @apply relative mx-auto mb-7 aspect-[3/4] w-full max-w-[210px] overflow-hidden rounded-t-full rounded-b-md border border-gold/60 bg-cream p-2 shadow-gold sm:max-w-[240px];
-  }
-
-  .portrait-frame::before {
-    content: "";
-    position: absolute;
-    inset: 10px;
-    z-index: 1;
-    pointer-events: none;
-    border: 1px solid rgba(255, 248, 234, 0.72);
-    border-radius: 999px 999px 10px 10px;
-  }
-
-  .portrait-frame img {
-    @apply rounded-t-full rounded-b-sm;
-    filter: saturate(0.96) contrast(1.02);
   }
 
   .date-lockup {
@@ -154,7 +163,11 @@ body::after {
   }
 
   .countdown-card {
-    @apply rounded-md border border-gold/45 bg-ivory p-5 text-center shadow-glow;
+    @apply rounded-lg border border-gold/45 bg-ivory/90 p-5 text-center shadow-glow transition duration-300;
+  }
+
+  .countdown-card:hover {
+    box-shadow: 0 0 0 1px rgba(201, 162, 77, 0.28), 0 24px 70px rgba(18, 60, 47, 0.13);
   }
 
   .countdown-card strong {
@@ -166,7 +179,7 @@ body::after {
   }
 
   .map-card {
-    @apply relative min-h-[360px] overflow-hidden rounded-md border border-gold/45 bg-cream shadow-gold;
+    @apply relative min-h-[360px] overflow-hidden rounded-lg border border-gold/45 bg-cream shadow-gold;
   }
 
   .map-card::before {
@@ -193,6 +206,111 @@ body::after {
     border-left: 1px solid;
     border-top: 1px solid;
   }
+
+  .opening-card {
+    width: min(100%, 46rem);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid rgba(201, 162, 77, 0.34);
+    border-radius: 0.5rem;
+    background:
+      linear-gradient(135deg, rgba(255, 248, 234, 0.7), rgba(255, 255, 255, 0.34)),
+      radial-gradient(circle at 50% 0%, rgba(201, 162, 77, 0.15), transparent 45%);
+    box-shadow: 0 30px 90px rgba(58, 42, 26, 0.14);
+    backdrop-filter: blur(8px);
+  }
+
+  .opening-card::before,
+  .opening-card::after,
+  .hero-invitation-frame::before,
+  .hero-invitation-frame::after {
+    content: "";
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    pointer-events: none;
+    border-color: rgba(201, 162, 77, 0.46);
+  }
+
+  .opening-card::before,
+  .hero-invitation-frame::before {
+    top: 14px;
+    left: 14px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+
+  .opening-card::after,
+  .hero-invitation-frame::after {
+    right: 14px;
+    bottom: 14px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+
+  .opening-flower,
+  .hero-flower,
+  .section-flower {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    filter: drop-shadow(0 24px 40px rgba(58, 42, 26, 0.1));
+  }
+
+  .opening-flower {
+    width: clamp(14rem, 28vw, 26rem);
+    z-index: 0;
+  }
+
+  .opening-flower-left {
+    left: max(-8rem, -9vw);
+    top: max(-7rem, -10vw);
+  }
+
+  .opening-flower-right {
+    right: max(-9rem, -10vw);
+    bottom: max(-8rem, -10vw);
+  }
+
+  .hero-invitation-frame {
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
+    border: 1px solid rgba(201, 162, 77, 0.28);
+    border-radius: 0.5rem;
+    background:
+      linear-gradient(145deg, rgba(255, 248, 234, 0.56), rgba(255, 255, 255, 0.28)),
+      radial-gradient(circle at 50% 8%, rgba(201, 162, 77, 0.14), transparent 34%);
+    box-shadow: 0 30px 100px rgba(80, 55, 20, 0.1);
+    backdrop-filter: blur(5px);
+  }
+
+  .hero-flower {
+    z-index: 0;
+    width: clamp(16rem, 27vw, 30rem);
+  }
+
+  .hero-flower-left {
+    left: max(-8rem, -8vw);
+    top: 2rem;
+  }
+
+  .hero-flower-right {
+    right: max(-9rem, -9vw);
+    bottom: 1.5rem;
+  }
+
+  .section-flower {
+    width: clamp(9rem, 16vw, 16rem);
+    opacity: 0.22 !important;
+  }
+
+  .section-flower-left {
+    left: -5rem;
+    top: 2rem;
+  }
+
+  .section-flower-right {
+    right: -5.5rem;
+    bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 420px) {
@@ -214,6 +332,46 @@ body::after {
 
   .countdown-card strong {
     font-size: 2.35rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .opening-card,
+  .hero-invitation-frame {
+    border-radius: 0.5rem;
+  }
+
+  .opening-card::before,
+  .opening-card::after,
+  .hero-invitation-frame::before,
+  .hero-invitation-frame::after {
+    width: 54px;
+    height: 54px;
+  }
+
+  .opening-flower {
+    width: 13rem;
+    opacity: 0.24 !important;
+  }
+
+  .hero-flower {
+    width: 14rem;
+    opacity: 0.25 !important;
+  }
+
+  .hero-flower-left {
+    left: -7.5rem;
+    top: 4rem;
+  }
+
+  .hero-flower-right {
+    right: -7.5rem;
+    bottom: 3rem;
+  }
+
+  .section-flower {
+    width: 10rem;
+    opacity: 0.09 !important;
   }
 }
 

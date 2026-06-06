@@ -51,13 +51,13 @@ export function RSVPSection() {
                 if (error) setError("");
               }}
               placeholder={invitationData.rsvp.placeholder}
-              className="min-h-14 flex-1 rounded-md border border-gold/45 bg-ivory px-5 font-body text-base text-ink-brown shadow-glow outline-none transition placeholder:text-ink-brown/40 focus:border-gold focus:ring-4 focus:ring-gold/20"
+              className="min-h-14 flex-1 rounded-lg border border-gold/45 bg-ivory px-5 font-body text-base text-ink-brown shadow-glow outline-none transition placeholder:text-ink-brown/40 focus:border-gold focus:ring-4 focus:ring-gold/20"
               aria-invalid={Boolean(error)}
               aria-describedby={error ? "rsvp-error" : "rsvp-success"}
             />
             <button
               type="submit"
-              className="min-h-14 rounded-md bg-emerald px-6 font-display text-xs font-semibold uppercase tracking-[0.18em] text-ivory shadow-gold transition hover:-translate-y-0.5 hover:bg-ink-brown focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40"
+              className="min-h-14 rounded-lg bg-emerald px-6 font-display text-xs font-semibold uppercase tracking-[0.18em] text-ivory shadow-gold transition hover:-translate-y-0.5 hover:bg-ink-brown focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40"
             >
               {invitationData.rsvp.button}
             </button>
@@ -77,7 +77,7 @@ export function RSVPSection() {
             {confirmedName && !error && (
               <motion.div
                 id="rsvp-success"
-                className="mt-5 flex items-start gap-3 rounded-md border border-gold/45 bg-ivory p-4 text-emerald shadow-glow"
+                className="mt-5 flex items-start gap-3 rounded-lg border border-gold/45 bg-ivory p-4 text-emerald shadow-glow"
                 initial={{ opacity: 0, scale: 0.97, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.97, y: 10 }}
